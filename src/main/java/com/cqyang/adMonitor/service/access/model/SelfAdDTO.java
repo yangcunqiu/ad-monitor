@@ -6,7 +6,7 @@ import lombok.Data;
 import java.util.List;
 
 @Data
-public class SelfAd {
+public class SelfAdDTO {
 
     /**
      * 来源id

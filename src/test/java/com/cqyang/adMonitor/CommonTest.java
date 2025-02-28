@@ -1,7 +1,7 @@
 package com.cqyang.adMonitor;
 
 import com.alibaba.fastjson2.JSON;
-import com.cqyang.adMonitor.service.access.model.SelfAd;
+import com.cqyang.adMonitor.service.access.model.SelfAdDTO;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.jupiter.api.Test;
 
@@ -14,7 +14,7 @@ public class CommonTest {
                 {"tag":"BAI_DU1"}
                 """;
 
-        SelfAd selfAd = JSON.parseObject(str, SelfAd.class);
-        log.info(JSON.toJSONString(selfAd));
+        SelfAdDTO selfAdDTO = JSON.parseObject(str, SelfAdDTO.class);
+        log.info(JSON.toJSONString(selfAdDTO));
     }
 }

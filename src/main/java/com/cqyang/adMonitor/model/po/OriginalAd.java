@@ -5,7 +5,6 @@ import com.cqyang.adMonitor.model.enums.SourceTypeEnum;
 import lombok.Data;
 
 import java.time.LocalDateTime;
-import java.util.List;
 
 /**
  * 原始广告
@@ -17,7 +16,7 @@ public class OriginalAd {
     /**
      * 来源id
      */
-    private Long sourceId;
+    private String sourceId;
     /**
      * 广告标题
      */
@@ -45,22 +44,21 @@ public class OriginalAd {
     /**
      * 广告物料链接
      */
-    private List<String> materialUrl;
+    private String materialUrl;
     /**
      * 标签
      * @see AdTagEnum
      */
     private AdTagEnum tag;
     /**
-     * 批次
+     * 业务标记
      */
-    private String batch;
+    private String bizTag;
     /**
      * 来源类型
      * @see SourceTypeEnum
      */
     private SourceTypeEnum sourceType;
-
     /**
      * 抓取时间
      */
@@ -72,7 +70,7 @@ public class OriginalAd {
     /**
      * 机审时间
      */
-    private LocalDateTime MachineAuditTime;
+    private LocalDateTime machineAuditTime;
     /**
      * 创建时间=入库时间
      */

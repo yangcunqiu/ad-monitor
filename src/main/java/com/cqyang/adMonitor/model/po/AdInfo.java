@@ -1,6 +1,8 @@
 package com.cqyang.adMonitor.model.po;
 
 import com.cqyang.adMonitor.model.enums.AdTagEnum;
+import com.cqyang.adMonitor.model.enums.AuditStatusEnum;
+import com.cqyang.adMonitor.model.enums.SubmitStatusEnum;
 import lombok.Data;
 
 import java.time.LocalDateTime;
@@ -17,6 +19,10 @@ public class AdInfo {
      * 原始广告id OriginalAd.id
      */
     private Long originalId;
+    /**
+     * 审核模版id AuditTemplate.id
+     */
+    private Integer machineAuditTemplateId;
     /**
      * 广告标题
      */
@@ -46,38 +52,54 @@ public class AdInfo {
      */
     private List<String> materialUrl;
     /**
+     * 行业
+     */
+    private String industry;
+    /**
      * 标签
      * @see AdTagEnum
      */
     private AdTagEnum tag;
     /**
-     * 批次
+     * 业务标记
      */
-    private String batch;
+    private String bizTag;
     /**
      * 机器审核状态
+     * @see AuditStatusEnum
      */
-    private Integer machineAuditStatus;
+    private AuditStatusEnum machineAuditStatus;
     /**
      * 人工初审审核状态
+     * @see AuditStatusEnum
      */
-    private Integer personTrialStatus;
+    private AuditStatusEnum personTrialStatus;
     /**
      * 人工初审人员名称
      */
-    private Integer personTrialName;
+    private String personTrialName;
     /**
      * 人工复审审核状态
+     * @see AuditStatusEnum
      */
-    private Integer personReviewStatus;
+    private AuditStatusEnum personReviewStatus;
     /**
      * 人工复审人员名称
      */
-    private Integer personReviewName;
+    private String personReviewName;
+    /**
+     * 交付任务id
+     */
+    private Long submitTaskId;
     /**
      * 交付状态
+     * @see SubmitStatusEnum
      */
-    private Integer submitStatus;
+    private SubmitStatusEnum submitStatus;
+    /**
+     * 交付时间
+     */
+    private LocalDateTime submitTime;
     /**
      * 创建时间=机审完成时间
      */

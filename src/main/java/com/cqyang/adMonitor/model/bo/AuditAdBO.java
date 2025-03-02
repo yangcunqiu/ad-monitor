@@ -1,18 +1,17 @@
-package com.cqyang.adMonitor.service.access.model;
+package com.cqyang.adMonitor.model.bo;
 
 import com.cqyang.adMonitor.model.enums.AdTagEnum;
 import lombok.Data;
 
 import java.time.LocalDateTime;
-import java.util.List;
 
 @Data
-public class SelfAdDTO {
+public class AuditAdBO {
 
     /**
-     * 来源id
+     * 原始广告id
      */
-    private String sourceId;
+    private Long originalAdId;
     /**
      * 广告标题
      */
@@ -40,18 +39,22 @@ public class SelfAdDTO {
     /**
      * 广告物料链接
      */
-    private List<String> materialUrl;
+    private String materialUrl;
     /**
      * 标签
      * @see AdTagEnum
      */
     private AdTagEnum tag;
     /**
-     * 业务标识
+     * 业务标记
      */
     private String bizTag;
     /**
      * 抓取时间
      */
     private LocalDateTime crawlTime;
+    /**
+     * 创建时间=入库时间
+     */
+    private LocalDateTime createTime;
 }
